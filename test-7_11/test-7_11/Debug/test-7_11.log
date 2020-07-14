@@ -1,2 +1,4 @@
 ﻿  源.cpp
-  test-7_11.vcxproj -> F:\weijilin_githup\ListNode_40\test-7_11\Debug\test-7_11.exe
+f:\weijilin_githup\listnode_40\test-7_11\test-7_11\源.cpp(127): error C4996: 'strcpy': This function or variable may be unsafe. Consider using strcpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  d:\windows kits\10\include\10.0.17763.0\ucrt\string.h(133): note: 参见“strcpy”的声明
+f:\weijilin_githup\listnode_40\test-7_11\test-7_11\源.cpp(131): error C2664: “void std::swap(std::exception_ptr &,std::exception_ptr &) noexcept”: 无法将参数 1 从“char *”转换为“std::exception_ptr &”
