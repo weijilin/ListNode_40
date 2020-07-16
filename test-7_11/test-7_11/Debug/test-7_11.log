@@ -1,7 +1,2 @@
 ﻿  源.cpp
-f:\weijilin_githup\listnode_40\test-7_11\test-7_11\源.cpp(293): error C2061: 语法错误: 标识符“Iterator”
-  f:\weijilin_githup\listnode_40\test-7_11\test-7_11\源.cpp(308): note: 参见对正在编译的 类 模板 实例化 "bit::vector<T>" 的引用
-f:\weijilin_githup\listnode_40\test-7_11\test-7_11\源.cpp(307): fatal error C1903: 无法从以前的错误中恢复；正在停止编译
-  “D:\VS2017\VC\Tools\MSVC\14.16.27023\bin\HostX86\x86\CL.exe”中的内部编译器错误
-    请选择 Visual C++ 
-  “帮助”菜单上的“技术支持”命令，或打开技术支持帮助文件来获得详细信息
+  test-7_11.vcxproj -> F:\weijilin_githup\ListNode_40\test-7_11\Debug\test-7_11.exe
