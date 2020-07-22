@@ -1,5 +1,5 @@
 #if 0
-// 模拟实现一份简答的SharedPtr,了解原理
+// 模拟一份简答的SharedPtr,了解原理
 #include <thread>
 #include <mutex>
 #include<iostream>
