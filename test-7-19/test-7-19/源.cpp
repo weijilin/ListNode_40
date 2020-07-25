@@ -97,6 +97,7 @@ int main()
 #include <set> 
 using namespace std;
 
+#if 0
 void TestMap() {    
 	map<string, string> m;
 
@@ -167,3 +168,65 @@ int main() {
 	system("pause");
 	return 0;
 }
+
+#endif
+template<class T> 
+struct AVLTreeNode {
+	AVLTreeNode(const T& data) :
+		_pLeft(nullptr), _pRight(nullptr), _pParent(nullptr), _data(data), _bf(0)
+	{}
+
+	AVLTreeNode<T>* _pLeft;   // 该节点的左孩子     
+	AVLTreeNode<T>* _pRight;  // 该节点的右孩子     
+	AVLTreeNode<T>* _pParent; // 该节点的双亲     
+	T _data;
+	int _bf;                  // 该节点的平衡因子 
+
+
+	bool Insert(const T& data)
+	{    // 1. 先按照二叉搜索树的规则将节点插入到AVL树中    
+		 // ...        
+		 // 2. 新节点插入后，AVL树的平衡性可能会遭到破坏，此时就需要更新平衡因子，并检测是否破坏了AVL树    
+		//    的平衡性        
+		/*     pCur插入后，pParent的平衡因子一定需要调整，在插入之前，
+		pParent     的平衡因子分为三种情况：-1，0, 1, 分以下两种情况：
+		1. 如果pCur插入到pParent的左侧，只需给pParent的平衡因子-1即可
+		2. 如果pCur插入到pParent的右侧，只需给pParent的平衡因子 + 1即可
+		此时：pParent的平衡因子可能有三种情况：0，正负1， 正负2
+		1. 如果pParent的平衡因子为0，说明插入之前pParent的平衡因子为正负1，插入后被调整成0，
+		此时满 足AVL树的性质，插入成功
+		2. 如果pParent的平衡因子为正负1，说明插入前pParent的平衡因子一定为0，插入后被更新成正负1，
+		此时以pParent为根的树的高度增加，需要继续向上更新
+		3. 如果pParent的平衡因子为正负2，则pParent的平衡因子违反平衡树的性质，需要对其进行旋转处理    */
+
+		while (pParent) {
+			// 更新双亲的平衡因子        
+			if (pCur == pParent->_pLeft)
+				pParent->_bf--;
+			else
+				pParent->_bf++;
+
+			// 更新后检测双亲的平衡因子        
+			if (0 == pParent->_bf)
+				break;
+			else if (1 == pParent->_bf || -1 == pParent->_bf)
+			{              // 插入前双亲的平衡因子是0，插入后双亲的平衡因为为1 或者 -1 ，说明以双亲为根的二叉 树              
+						   // 的高度增加了一层，因此需要继续向上调整             
+				pCur = pParent;
+				pParent = pCur->_pParent;
+			}
+			else
+			{             // 双亲的平衡因子为正负2，违反了AVL树的平衡性，需要对以pParent             
+						  // 为根的树进行旋转处理              
+				if (2 == pParent->_bf)
+				{                  // ...              
+				}
+				else
+				{                  // ...              
+				}
+			}
+		}
+
+		return true;
+	}
+};
