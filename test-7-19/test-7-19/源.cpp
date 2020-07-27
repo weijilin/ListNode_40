@@ -258,7 +258,7 @@ public:
            hashAddr++;           
 		   if (hashAddr == _ht.capacity())               
 			   hashAddr = 0;           
-		   /*           // 转一圈也没有找到，注意：动态哈希表，该种情况可以不用考虑，哈希表中元素个数到达 一定的数量，哈希冲突概率会增大，需要扩容来降低哈希冲突，因此哈希表中元素是不会存满的           if(hashAddr == startAddr)               return false;           */       
+		   /*     转一圈也没有找到，注意：动态哈希表，该种情况可以不用考虑，哈希表中元素个数到达 一定的数量，哈希冲突概率会增大，需要扩容来降低哈希冲突，因此哈希表中元素是不会存满的           if(hashAddr == startAddr)               return false;           */       
 		}              
 		// 插入元素       
 	_ht[hashAddr]._state = EXIST;       
