@@ -158,7 +158,7 @@ void TestSet()
     for (auto it = s.rbegin(); it != s.rend(); ++it)       
 		cout << *it << " ";    cout << endl;
 
-// set中值为3的元素出现了几次    
+  
 	cout << s.count(3) << endl; 
 }
 
@@ -185,7 +185,7 @@ struct AVLTreeNode {
 
 	bool Insert(const T& data)
 	{    // 1. 先按照二叉搜索树的规则将节点插入到AVL树中    
-		 // ...        
+	       
 		 // 2. 新节点插入后，AVL树的平衡性可能会遭到破坏，此时就需要更新平衡因子，并检测是否破坏了AVL树    
 		//    的平衡性        
 		/*     pCur插入后，pParent的平衡因子一定需要调整，在插入之前，
